@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="shortcut icon" href="http://vignette1.wikia.nocookie.net/fantendo/images/3/31/NintendoLandPokemonIcon.png/revision/latest?cb=20130730123312" type="image/png">
+
+        <!-- Latest compiled and minified CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-Xqcy5ttufkC3rBa8EdiAyA1VgOGrmel2Y+wxm4K3kI3fcjTWlDWrlnxyD6hOi3PF" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.js"
+      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+      crossorigin="anonymous"></script>
+
+    <script src="JavaScript.js" ></script>
+
+  </head>
+
+  <body style="width:100%; margin:auto;min-width:600px;max-width:2000px;" background="http://cdn.wallpapersafari.com/76/5/GcYt9e.jpg">
+    <br/>
+    <div class="container" style="margin-left: 50px; margin-right: 50px;">
+      <div class="row col-md-offset-1">
+        <h1 style="color: rgb(255, 255, 255); -webkit-text-stroke: 1px black; width: 390px;">Datos del Entrenador<h1>  
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-1" style="margin-left: 0px;">
+          <div class="input-group" style="margin:10px;">
+            <span class="input-group-addon" style="min-width:100px; width:100px; max-width:100px;">Cedula</span>
+            <input type="text" class="form-control" placeholder="Cedula" style="min-width:400px;" id="txt_cedula" disabled="true">
+          </div>
+          <div class="input-group" style="margin:10px;">
+            <span class="input-group-addon" style="min-width:100px; width:100px; max-width:100px;">Nombre</span>
+            <input type="text" class="form-control" placeholder="Nombre" style="min-width:400px;" id="txt_nombre" disabled="true">
+          </div>
+          <div class="input-group" style="margin:10px;">
+            <span class="input-group-addon" style="min-width:100px; width:100px; max-width:100px;">Apellido</span>
+            <input type="text" class="form-control" placeholder="Apellido" style="min-width:400px;" id="txt_apellido" disabled="true">
+          </div>
+          <div class="input-group" style="margin:10px;">
+            <span class="input-group-addon" style="min-width:100px; width:100px; max-width:100px;">Experiencia</span>
+            <input type="text" class="form-control" placeholder="Experiencia" readonly="true" style="min-width:400px;" id="txt_exp">
+          </div>
+          <button type="button" class="btn" style="margin:10px; color:black; width:100px; margin-left:0px;" id="btn_nuevo">Nuevo</button>
+          <button type="button" class="btn" style="margin:10px; color:black; position:absolute; top:206px; left:135px; width:100px;" id="btn_guardar">Guardar</button>
+          <button type="button" class="btn" style="margin:10px; color:black; position:absolute; top:206px; left:260px; width:100px;" href="#" id="btn_modificar">Modificar</button>
+        </div>
+        <div class="col-md-5 col-md-offset-2" style="height: 230px; min-height: 230px; max-height: 230px; overflow-y: scroll; margin-left: 295px; width: 430px; padding-left: 0px; padding-right: 0px;margin-top: 10px;" id="div_data">
+          <table class="table" id="table" style="  background-color: rgba(26, 20, 15, 0.58);">
+            <thead>
+              <tr>
+                <td><h5>Pokemon</h5></td>
+                <td><h5>Nivel</h5></td>
+                <td><h5>Experiencia</h5></td> 
+                <td></td>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <tr>
+                <td><input type="text" class="form-control" id="txt_nombre_pokemon"></td>
+                <td><input type="number" class="form-control" id="txt_nivel_pokemon"></td>
+                <td><input type="number" class="form-control" id="txt_exp_pokemon"></td>
+                <td><input type="button" class="btn" value="Agregar" id="btn_agregar"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br/>
+      <br>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2 style="color: rgb(255, 255, 255); -webkit-text-stroke: 1px black;">Entrenadores</h2>
+          <table class="table table-bordered" style="background-color: rgba(26, 20, 15, 0.58);" id="tableMaster">
+            <thead>
+              <tr>
+                <td><h5>Cedula</h5></td>
+                <td><h5>Nombre</h5></td>
+                <td><h5>Apellido</h5></td>
+                <td><h5>Experiencia</h5></td>
+                <td><h5>Numero de Pokemones</h5></td>
+              </tr>
+            </thead>
+            <tbody id="tbodyMaster">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
